@@ -27,7 +27,6 @@ environ.Env.read_env()
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-nh82%55qwm!2w^1!s95*828l=$s*2ha3z^mb$8ei6@e5v1ts%z'
 
 # Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
 SECRET_KEY = env('SECRET_KEY')
