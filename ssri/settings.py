@@ -16,11 +16,21 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+# Use django-environ to manage environmental variables
+import environ
+
+env = environ.Env()
+#reading .env file
+environ.Env.read_env()
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-nh82%55qwm!2w^1!s95*828l=$s*2ha3z^mb$8ei6@e5v1ts%z'
+# SECRET_KEY = 'django-insecure-nh82%55qwm!2w^1!s95*828l=$s*2ha3z^mb$8ei6@e5v1ts%z'
+
+# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -89,14 +99,13 @@ DATABASES = {
 DATABASES = {
     "default": {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "HOST": "172.28.240.1",
-        "NAME": "ssri_db",
-        "PASSWORD": "postgres",
-        "PORT": 5432,
-        "USER": "postgres",
+        "HOST": env("DATABASE_HOST"),
+        "NAME": env("DATABASE_NAME"),
+        "PASSWORD": env("DATABASE_PASSWORD"),
+        "PORT": env("DATABASE_PORT"),
+        "USER": env("DATABASE_USER"),
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
