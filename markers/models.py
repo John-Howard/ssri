@@ -10,6 +10,7 @@ class Marker(models.Model):
     location = models.PointField()
     description = models.CharField(max_length=255, default='')
     linked_document = models.URLField(max_length=200, default='')
+    uprn = models.PositiveBigIntegerField(default=0)
 
     def __str__(self):
         """Return string representation."""

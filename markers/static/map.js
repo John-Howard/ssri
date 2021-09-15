@@ -13,6 +13,6 @@ async function load_markers() {
 }
 async function render_markers() {
   const markers = await load_markers()
-  L.geoJSON(markers).bindPopup(layer => "<strong>" + layer.feature.properties.name + "</strong><br><br>" + layer.feature.properties.description + "<br><br>" + "<a href=" + layer.feature.properties.linked_document + " target='_blank' >" + layer.feature.properties.linked_document + "<\a>").addTo(map)
+  L.geoJSON(markers).bindPopup(layer => "<strong>" + layer.feature.properties.name + "<br><br>" + layer.feature.properties.uprn + "</strong><br><br>" + layer.feature.properties.description + "<br><br>" + "<a href=" + layer.feature.properties.linked_document + " target='_blank' >" + layer.feature.properties.linked_document + "<\a>").addTo(map)
 }
 map.on('moveend', render_markers)
