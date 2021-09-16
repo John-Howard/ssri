@@ -9,4 +9,4 @@ from organisations.models import Organisation
 class OrganisationAdmin(admin.OSMGeoAdmin):
     """Marker admin."""
 
-    list_display = ("uprn", "name", "building_name_or_number", "city_or_town", "street", "postcode")
+    list_display = ("uprn", "name", "building_name_or_number", "street", "city_or_town", "postcode")
