@@ -11,6 +11,7 @@ class Marker(models.Model):
     reference_code = models.CharField(max_length=50, default='')
     classification_or_type = models.CharField(max_length=255, default='')
     is_published = models.BooleanField(default=False)
+    created_at = models.DateTimeField(auto_now_add=True)
     last_updated = models.DateTimeField(auto_now=True)
     location = models.PointField()
     description = models.CharField(max_length=255, default='')
