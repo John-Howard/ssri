@@ -9,4 +9,4 @@ from markers.models import Marker
 class MarkerAdmin(admin.OSMGeoAdmin):
     """Marker admin."""
 
-    list_display = ("name", "location", "description", "linked_document")
+    list_display = ("name", "is_published", "reference_code", "location", "description", "linked_document", "classification_or_type", "last_updated")
