@@ -1,6 +1,7 @@
 """Markers models."""
 
 from django.contrib.gis.db import models
+from organisations.models import Organisation
 
 
 class Marker(models.Model):
@@ -11,6 +12,7 @@ class Marker(models.Model):
     description = models.CharField(max_length=255, default='')
     linked_document = models.URLField(max_length=200, default='')
     uprn = models.PositiveBigIntegerField(default=0)
+    organisation = models.ForeignKey(Organisation, on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         """Return string representation."""
