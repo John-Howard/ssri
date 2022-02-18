@@ -1,0 +1,11 @@
+asgiref
+Django
+django-environ
+django-filter
+djangorestframework
+djangorestframework-gis
+psycopg2
+psycopg2-binary
+pytz
+sqlparse
+typing-extensions
