@@ -1,7 +1,6 @@
 """Markers serializers."""
 
 from rest_framework_gis import serializers
-
 from markers.models import Marker
 
 
