@@ -156,9 +156,10 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 LEAFLET_CONFIG = {
     "DEFAULT_CENTER": (51.9, -0.2),
-    "DEFAULT_ZOOM": 7,
+    "DEFAULT_ZOOM": 10,
     "MAX_ZOOM": 20,
     "MIN_ZOOM": 3,
     "SCALE": "both",
     "ATTRIBUTION_PREFIX": "SSRI Marker Map",
+    "TILES": env("API_KEY"),
 }
