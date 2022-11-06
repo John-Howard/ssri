@@ -2,22 +2,11 @@
 
 from django.contrib.gis import admin
 from markers.models import Marker
-
-
-class CustomGeoModelAdmin(admin.GISModelAdmin):
-    gis_widget_kwargs = {
-        "attrs": {
-            "default_zoom": 9,
-            "default_lon": -0.2,
-            "default_lat": 51.9,
-            "map_width": 700,
-            "map_height": 500,
-        },
-    }
+from leaflet.admin import LeafletGeoAdmin
 
 
 @admin.register(Marker)
-class MarkerAdmin(CustomGeoModelAdmin):
+class MarkerAdmin(LeafletGeoAdmin):
     pass
     """Marker admin."""
 
