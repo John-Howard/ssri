@@ -5,6 +5,7 @@ click==8.0.3
 Django==4.0.8
 django-environ==0.8.1
 django-filter==21.1
+django-leaflet==0.28.3
 djangorestframework==3.13.1
 djangorestframework-gis==0.18
 isort==5.10.1
