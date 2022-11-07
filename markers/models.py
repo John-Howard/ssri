@@ -7,6 +7,7 @@ from organisations.models import Organisation
 class Marker(models.Model):
     """A marker with name and location."""
 
+    uprn = models.PositiveBigIntegerField("UPRN", default=0)
     name = models.CharField("Risk Title", max_length=255)
     reference_code = models.CharField(max_length=50, default="")
     classification_or_type = models.CharField(max_length=255, default="")
@@ -16,7 +17,6 @@ class Marker(models.Model):
     location = models.PointField()
     description = models.CharField(max_length=255, default="")
     linked_document = models.URLField(max_length=200, default="")
-    uprn = models.PositiveBigIntegerField("UPRN", default=0)
     organisation = models.ForeignKey(Organisation, on_delete=models.CASCADE, default=1)
 
     def __str__(self):
