@@ -2,7 +2,7 @@
 
 from rest_framework import routers
 
-from markers.api_views import MarkerViewSet
+from markers.viewsets import MarkerViewSet
 
 router = routers.DefaultRouter()
 router.register(r"markers", MarkerViewSet)
