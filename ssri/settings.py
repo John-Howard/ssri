@@ -161,6 +161,24 @@ LEAFLET_CONFIG = {
     "MIN_ZOOM": 3,
     "SCALE": "both",
     "ATTRIBUTION_PREFIX": "",
-    "TILES": "https://api.os.uk/maps/raster/v1/zxy/Outdoor_3857/{z}/{x}/{y}.png?key="
-    + env("API_KEY"),
+    "TILES": [
+        (
+            "Road",
+            "https://api.os.uk/maps/raster/v1/zxy/Road_3857/{z}/{x}/{y}.png?key="
+            + env("API_KEY"),
+            {},
+        ),
+        (
+            "Outdoor",
+            "https://api.os.uk/maps/raster/v1/zxy/Outdoor_3857/{z}/{x}/{y}.png?key="
+            + env("API_KEY"),
+            {},
+        ),
+        (
+            "Light",
+            "https://api.os.uk/maps/raster/v1/zxy/Light_3857/{z}/{x}/{y}.png?key="
+            + env("API_KEY"),
+            {},
+        ),
+    ],
 }
