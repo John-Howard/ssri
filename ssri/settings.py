@@ -161,5 +161,6 @@ LEAFLET_CONFIG = {
     "MIN_ZOOM": 3,
     "SCALE": "both",
     "ATTRIBUTION_PREFIX": "SSRI Marker Map",
-    "TILES": env("API_KEY"),
+    "TILES": "https://api.os.uk/maps/raster/v1/zxy/Road_3857/{z}/{x}/{y}.png?key="
+    + env("API_KEY"),
 }
