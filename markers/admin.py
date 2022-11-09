@@ -1,8 +1,8 @@
 """Markers admin."""
 
 from django.contrib.gis import admin
-from markers.models import Marker
 from leaflet.admin import LeafletGeoAdmin
+from markers.models import Marker
 
 
 @admin.register(Marker)
