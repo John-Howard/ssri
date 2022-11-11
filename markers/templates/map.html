@@ -20,7 +20,7 @@
   <script src="https://labs.os.uk/public/os-api-branding/v0.2.0/os-api-branding.js" data-div="map" data-prefix="Powered by django-leaflet"></script>
 </head>
 <body>
-    {% leaflet_map "map" %}
+    {% leaflet_map "map" callback="window.map_init_basic" %}
     <script src="{% static 'map.js' %}"></script>
 </body>
 </html>
