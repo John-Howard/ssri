@@ -1,3 +1,4 @@
+{% load static %}
 {% load leaflet_tags %}
 <!doctype html>
 <html lang="en">
@@ -16,9 +17,10 @@
     }
   </style>
   <link rel="stylesheet" href="https://labs.os.uk/public/os-api-branding/v0.2.0/os-api-branding.css" />
-  <script src="https://labs.os.uk/public/os-api-branding/v0.2.0/os-api-branding.js" data-div="main" data-prefix="Powered by django-leaflet"></script>
+  <script src="https://labs.os.uk/public/os-api-branding/v0.2.0/os-api-branding.js" data-div="map" data-prefix="Powered by django-leaflet"></script>
 </head>
 <body>
-    {% leaflet_map "main" %}
+    {% leaflet_map "map" %}
+    <script src="{% static 'map.js' %}"></script>
 </body>
 </html>
