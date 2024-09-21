@@ -1,6 +1,6 @@
 asgiref==3.5.0
 astroid==2.9.3
-black==22.1.0
+black==24.3.0
 click==8.0.3
 Django==4.1.13
 django-environ==0.8.1
